@@ -158,7 +158,8 @@ board = []
 with open('example.txt', 'r') as file:
     for line in file:
         board.append([int(num) for num in line.split()])
-print(board)
+print("Initial Puzzle")
+# print(board)
 
 puzzle = Puzzle(board)
 s = Solver(puzzle)
@@ -170,4 +171,4 @@ for node in p:
     node.puzzle.pprint()
     steps += 1
 
-print("Total number of steps: " + str(steps))
+print("Total number of steps needed to reach the solved puzzle: " + str(steps))
