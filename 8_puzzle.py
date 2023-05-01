@@ -15,7 +15,7 @@ class Node:
         self.puzzle = puzzle
         self.parent = parent
         self.action = action
-        if (self.parent != None):
+        if (self.parent is not None):
             self.g = parent.g + 1
         else:
             self.g = 0
